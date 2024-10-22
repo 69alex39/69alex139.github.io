@@ -5,7 +5,7 @@ describe('Проверка авторизации', function () {
          cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)') // проверяю цвет кнопки восстановить пароль
 
          cy.get('#mail').type('german@dolnikov.ru'); // Ввели верный логин
-         cy.get('#pass').type('iLoveqastudio1'); // Ввели верный пароль
+         cy.get('#pass').type('USER_PASSWORD'); // Ввели верный пароль
          cy.get('#loginButton').click(); // нажал войти
 
          cy.get('#messageHeader').contains('Авторизация прошла успешно'); // проверяю что после авторизации вижу текст
@@ -18,7 +18,7 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)') // проверяю цвет кнопки восстановить пароль
 
         cy.get('#mail').type('german@dolnikov.ru'); // Ввели верный логин
-        cy.get('#pass').type('iLoveqastudio7'); // Ввели неверный пароль
+        cy.get('#pass').type('USER_PASSWORD'); // Ввели неверный пароль
         cy.get('#loginButton').click(); // нажал войти
 
         cy.get('#messageHeader').contains('Такого логина или пароля нет'); // проверяю что после авторизации вижу текст
@@ -30,7 +30,7 @@ describe('Проверка авторизации', function () {
         cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)') // проверяю цвет кнопки восстановить пароль
 
         cy.get('#mail').type('german@dopnikov.ru'); // Ввели неверный логин
-        cy.get('#pass').type('iLoveqastudio1'); // Ввели верный пароль
+        cy.get('#pass').type('USER_PASSWORD'); // Ввели верный пароль
         cy.get('#loginButton').click(); // нажал войти
 
         cy.get('#messageHeader').contains('Такого логина или пароля нет'); // проверяю что после авторизации вижу текст
@@ -43,7 +43,7 @@ describe('Проверка авторизации', function () {
     cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)') // проверяю цвет кнопки восстановить пароль
 
     cy.get('#mail').type('germandopnikov.ru'); // Ввели неверный логин, без "@"
-    cy.get('#pass').type('iLoveqastudio1'); // Ввели верный пароль
+    cy.get('#pass').type('USER_PASSWORD'); // Ввели верный пароль
     cy.get('#loginButton').click(); // нажал войти
 
     cy.get('#messageHeader').contains('Нужно исправить проблему валидации'); // проверяю что после авторизации вижу текст
@@ -71,7 +71,7 @@ it('приведение к строчным буквам в логине', func
     cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)') // проверяю цвет кнопки восстановить пароль
 
     cy.get('#mail').type('GerMan@Dolnikov.ru'); // Ввели верный логин
-    cy.get('#pass').type('iLoveqastudio1'); // Ввели верный пароль
+    cy.get('#pass').type('USER_PASSWORD'); // Ввели верный пароль
     cy.get('#loginButton').click(); // нажал войти
 
     cy.get('#messageHeader').contains('Авторизация прошла успешно'); // проверяю что после авторизации вижу текст
